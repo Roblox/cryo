@@ -1,0 +1,21 @@
+site_name: Cryo Documentation
+site_url: https://roblox.github.io/cryo/
+repo_name: Roblox/cryo
+repo_url: https://github.com/Roblox/cryo
+
+theme:
+  name: material
+  palette:
+    primary: 'Orange'
+    accent: 'Orange'
+
+pages:
+  - Home: index.md
+  - API Reference: api-reference.md
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true

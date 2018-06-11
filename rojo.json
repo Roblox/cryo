@@ -1,0 +1,5 @@
+{
+  "name": "cryo",
+  "servePort": 8000,
+  "partitions": {}
+}

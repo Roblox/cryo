@@ -1,0 +1,1 @@
+This is the documentation home for Cryo, a collection of utilities for working with immutable data in Roblox Lua.
