@@ -1,13 +1,4 @@
---[[
-	Defines utilities for working with 'dictionary-like' tables.
-
-	Dictionaries can be indexed by any value, but don't have the ordering
-	expectations that lists have.
-]]
-
-local None = require(script.Parent.None)
-
-local Dictionary = {}
+local None = require(script.Parent.Parent.None)
 
 --[[
 	Combine a number of dictionary-like tables into a new table.
@@ -18,7 +9,7 @@ local Dictionary = {}
 	Lua does not distinguish between a value not being present in a table and a
 	value being `nil`.
 ]]
-function Dictionary.join(...)
+local function join(...)
 	local new = {}
 
 	for i = 1, select("#", ...) do
@@ -36,4 +27,4 @@ function Dictionary.join(...)
 	return new
 end
 
-return Dictionary
+return join
