@@ -7,4 +7,5 @@
 
 return {
 	join = require(script.join),
+	fold = require(script.fold),
 }
