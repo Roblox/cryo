@@ -7,4 +7,5 @@ return {
 	foldRight = require(script.foldRight),
 	join = require(script.join),
 	map = require(script.map),
+	reverse = require(script.reverse),
 }
