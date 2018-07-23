@@ -4,4 +4,5 @@
 
 return {
 	join = require(script.join),
+	map = require(script.map),
 }
