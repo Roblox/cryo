@@ -3,6 +3,7 @@
 ]]
 
 return {
+	find = require(script.find),
 	filterMap = require(script.filterMap),
 	filter = require(script.filer),
 	foldLeft = require(script.foldLeft),
