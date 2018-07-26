@@ -3,6 +3,7 @@
 ]]
 
 return {
+	getRange = require(script.getRange),
 	find = require(script.find),
 	filterMap = require(script.filterMap),
 	filter = require(script.filer),
