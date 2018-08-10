@@ -6,7 +6,7 @@ return {
 	getRange = require(script.getRange),
 	find = require(script.find),
 	filterMap = require(script.filterMap),
-	filter = require(script.filer),
+	filter = require(script.filter),
 	foldLeft = require(script.foldLeft),
 	foldRight = require(script.foldRight),
 	join = require(script.join),
