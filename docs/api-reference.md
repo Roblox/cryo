@@ -1,11 +1,9 @@
 ## Constants
 
 ### None
-Represents a value that is intentionally present, but should be interpreted
-as `nil`.
+Represents a value that is intentionally present, but should be interpreted as `nil`.
 
-`Cryo.None` is used by included utilities to make removing values more
-ergonomic.
+`Cryo.None` is used by included utilities to make removing values more ergonomic.
 
 ---
 
@@ -20,8 +18,7 @@ Tells whether the given table is empty in constant time. Works on both dictionar
 ## Dictionary
 Defines utilities for working with dictionary-like tables.
 
-Dictionaries can be indexed by any value, but don't have the ordering
-expectations that lists have.
+Dictionaries can be indexed by any value, but don't have the ordering expectations that lists have.
 
 ### Dictionary.join
 ```
@@ -31,9 +28,7 @@ Combine a number of dictionary-like tables into a new table.
 
 Keys specified in later tables will overwrite keys in previous tables.
 
-Use `Cryo.None` as a value to remove a value from the resulting table. This
-is necessary because Lua does not distinguish between a value not being
-present in a table and a value being `nil`.
+Use `Cryo.None` as a value to remove a value from the resulting table. This is necessary because Lua does not distinguish between a value not being present in a table and a value being `nil`.
 
 ---
 
@@ -94,8 +89,7 @@ If `result` is `nil`, the value will not be included in the new list. Any other 
 ```
 Cryo.List.find(list, value) -> index | nil
 ```
-Searches for the value in the given list and returns the position of the first
-occurence of the value. If the value is not found, `find` will return `nil`.
+Searches for the value in the given list and returns the position of the first occurence of the value. If the value is not found, `find` will return `nil`.
 
 ---
 
@@ -103,8 +97,7 @@ occurence of the value. If the value is not found, `find` will return `nil`.
 ```
 Cryo.List.foldLeft(list, callback, initialValue) -> value
 ```
-Iterates over the given list and uses the given callback to calculate the returned
-value.
+Iterates over the given list and uses the given callback to calculate the returned value.
 
 `callback` should be a function with this signature:
 
@@ -147,8 +140,7 @@ Combines all the given lists into a single new list.
 ```
 Cryo.List.map(list, callback) -> list
 ```
-Constructs a new list by using the callback to replace elements in the list.
-`callback` should be a function like the following.
+Constructs a new list by using the callback to replace elements in the list. `callback` should be a function like the following.
 
 ```
 callback(element, index) -> newElement
@@ -166,8 +158,7 @@ Creates a new list without the given index.
 ```
 Cryo.List.removeRange(list, startIndex, endIndex) -> list
 ```
-Creates a new list without the given range. The indexes `startIndex` and
-`endIndex` will not be included in the returned list.
+Creates a new list without the given range. The indexes `startIndex` and `endIndex` will not be included in the returned list.
 
 ---
 
@@ -183,8 +174,7 @@ Creates a new list without any occurences of the given value.
 ```
 Cryo.List.reverse(list) -> list
 ```
-Creates a new list with the same elements from the given list, but in the
-opposite order.
+Creates a new list with the same elements from the given list, but in the opposite order.
 
 ---
 
