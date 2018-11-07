@@ -101,7 +101,7 @@ occurence of the value. If the value is not found, `find` will return `nil`.
 
 ### List.foldLeft
 ```
-Cryo.List.foldLeft(list, initialValue, callback) -> value
+Cryo.List.foldLeft(list, callback, initialValue) -> value
 ```
 Iterates over the given list and uses the given callback to calculate the returned
 value.
@@ -129,7 +129,7 @@ local sum = List.foldLeft(list, add, 0)
 
 ### List.foldRight
 ```
-Cryo.List.foldRight(list, initialValue, callback) -> value
+Cryo.List.foldRight(list, callback, initialValue) -> value
 ```
 Similar to [`List.foldLeft`](#list-foldLeft), except the list is traversed from right-to-left instead of from left-to-right. `foldRight` is useful when working with operations that aren't associative.
 

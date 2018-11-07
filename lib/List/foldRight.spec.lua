@@ -5,9 +5,9 @@ return function()
 		local a = {1, 2, 3}
 		local called = 0
 
-		foldRight(a, 0, function()
+		foldRight(a, function()
 			called = called + 1
-		end)
+		end, 0)
 
 		expect(called).to.equal(3)
 	end)
@@ -15,9 +15,9 @@ return function()
 	it("should not call the callback when the list is empty", function()
 		local called = false
 
-		foldRight({}, 0, function()
+		foldRight({}, function()
 			called = true
-		end)
+		end, 0)
 
 		expect(called).to.equal(false)
 	end)
@@ -26,10 +26,10 @@ return function()
 		local a = {4, 5, 6}
 		local copy = {}
 
-		foldRight(a, 0, function(accum, value, index)
+		foldRight(a, function(accum, value, index)
 			copy[index] = value
 			return accum
-		end)
+		end, 0)
 
 		expect(#copy).to.equal(#a)
 
@@ -42,20 +42,20 @@ return function()
 		local a = {5, 4, 3}
 		local initialValue = {}
 
-		foldRight(a, initialValue, function(accum)
+		foldRight(a, function(accum)
 			expect(accum).to.equal(initialValue)
 			return accum
-		end)
+		end, initialValue)
 	end)
 
 	it("should call the callback in the correct order", function()
 		local a = {5, 4, 3}
 		local index = 3
 
-		foldRight(a, 0, function(accum, value)
+		foldRight(a, function(accum, value)
 			expect(value).to.equal(a[index])
 			index = index - 1
 			return accum
-		end)
+		end, 0)
 	end)
 end
