@@ -1,10 +1,10 @@
 ## Constants
 
-### Cryo.None
+### None
 Represents a value that is intentionally present, but should be interpreted
 as `nil`.
 
-Cryo.None is used by included utilities to make removing values more
+`Cryo.None` is used by included utilities to make removing values more
 ergonomic.
 
 ---
