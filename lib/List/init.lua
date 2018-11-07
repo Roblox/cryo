@@ -15,5 +15,5 @@ return {
 	removeRange = require(script.removeRange),
 	removeValue = require(script.removeValue),
 	reverse = require(script.reverse),
-	sorted = require(script.sorted),
+	sort = require(script.sort),
 }

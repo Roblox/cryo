@@ -1,10 +1,10 @@
 return function()
-	local sorted = require(script.Parent.sorted)
+	local sort = require(script.Parent.sort)
 
 	it("should return a new table", function()
 		local a = {}
 
-		expect(sorted(a)).never.to.equal(a)
+		expect(sort(a)).never.to.equal(a)
 	end)
 
 	it("should not mutate the given table", function()
@@ -12,7 +12,7 @@ return function()
 		local function order(first, second)
 			return tostring(first) < tostring(second)
 		end
-		sorted(a, order)
+		sort(a, order)
 
 		expect(#a).to.equal(3)
 		expect(a[1]).to.equal(77)
@@ -31,7 +31,7 @@ return function()
 			Bar = true,
 			Test = true
 		}
-		local b = sorted(a)
+		local b = sort(a)
 
 		expect(#b).to.equal(3)
 		for _, value in ipairs(b) do
@@ -41,7 +41,7 @@ return function()
 
 	it("should sort with the default table.sort when no callback is given", function()
 		local a = {4, 2, 5, 3, 1}
-		local b = sorted(a)
+		local b = sort(a)
 
 		table.sort(a)
 
@@ -56,7 +56,7 @@ return function()
 		local function order(first, second)
 			return first > second
 		end
-		local b = sorted(a, order)
+		local b = sort(a, order)
 
 		table.sort(a, order)
 
@@ -67,7 +67,7 @@ return function()
 	end)
 
 	it("should work with an empty table", function()
-		local a = sorted({})
+		local a = sort({})
 
 		expect(#a).to.equal(0)
 	end)

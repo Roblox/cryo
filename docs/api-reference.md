@@ -9,27 +9,19 @@ ergonomic.
 
 ---
 
+## isEmpty
+```
+Cryo.isEmpty(table) -> bool
+```
+Tells whether the given table is empty in constant time. Works on both dictionary-like and list-like tables.
+
+---
+
 ## Dictionary
-Defines utilities for working with 'dictionary-like' tables.
+Defines utilities for working with dictionary-like tables.
 
 Dictionaries can be indexed by any value, but don't have the ordering
 expectations that lists have.
-
-### Dictionary.fold
-```
-Cryo.Dictionary.fold(dictionary, initialValue, callback) -> value
-```
-Iterates over the given dictionary and uses the callback to calculate the
-returned value. The `callback` is expected to be a function like the following
-that will be called for each pair of the dictionary. `currentValue` is the
-last value returned by the `callback` function (or `initialValue` for the
-first call) and `key, value` is a pair from the dictionary.
-
-```
-function(currentValue, key, value) -> value
-```
-
-The order in which the dictionary is traversed is not guaranteed.
 
 ### Dictionary.join
 ```
@@ -43,11 +35,15 @@ Use `Cryo.None` as a value to remove a value from the resulting table. This
 is necessary because Lua does not distinguish between a value not being
 present in a table and a value being `nil`.
 
+---
+
 ### Dictionary.keys
 ```
 Cryo.Dictionary.keys(dictionary) -> list
 ```
 Combines all keys from the dictionary into a list-like table.
+
+---
 
 ### Dictionary.values
 ```
@@ -67,73 +63,85 @@ Lists are tables indexed with continuous integer keys starting at 1.
 Cryo.List.filter(list, callback) -> list
 ```
 Constructs a new list by filtering elements with the given callback.
-`callback` is expected to be a function like the following, where `value`
-is an element from the list and `index` is its position in the list.
+
+`callback` is expected to be a function with this signature:
 
 ```
 callback(value, index) -> result
 ```
 
-If `result` is truthy, the value will be included in the new list. Otherwise,
-the value will be ignored.
+If `result` is truthy, the value will be included in the new list. Otherwise, the value will be ignored.
+
+---
 
 ### List.filterMap
 ```
 Cryo.List.filterMap(list, callback) -> list
 ```
-Combines the functionality of `List.filter` and `List.map`, where `callback`
-should be a function like the following.
+Combines the functionality of `List.filter` and `List.map`.
+
+`callback` should be a function with this signature:
 
 ```
 callback(value, index) -> result
 ```
 
-`value` is an element from the list and `index` is its position in the list.
-If `result` is `nil`, the value will not be included in the new list. Any other
-result will add the `result` value to the new list.
+If `result` is `nil`, the value will not be included in the new list. Any other result will add the `result` value to the new list.
+
+---
 
 ### List.find
 ```
-Cryo.List.find(list, value) -> index
+Cryo.List.find(list, value) -> index | nil
 ```
 Searches for the value in the given list and returns the position of the first
 occurence of the value. If the value is not found, `find` will return `nil`.
 
+---
+
 ### List.foldLeft
 ```
-Cryo.List.foldLeft(list, initalValue, callback) -> value
+Cryo.List.foldLeft(list, initialValue, callback) -> value
 ```
-Iterates over the given list and uses the callback to calculate the returned
-value. The `callback` is expected to be a function like the following.
+Iterates over the given list and uses the given callback to calculate the returned
+value.
+
+`callback` should be a function with this signature:
 
 ```
-callback(currentValue, key, index) -> value
+callback(accumulator, value, index) -> newAccumulator
 ```
 
-It will be called for each element of the list, from the beginning to the
-end. `currentValue` is the last value returned by the `callback` function
-(or `initialValue` for the first call) and `element, index` is a pair from
-the dictionary.
+`callback` will be invoked once for each value in the list. It should return a new accumulator value that will be passed to the next invocation of `callback`.
+
+`foldLeft` is sometimes known as `reduce`. It can be used to perform operations like summing a list:
+
+```lua
+local list = {1, 2, 3}
+local function add(a, b)
+	return a + b
+end
+
+local sum = List.foldLeft(list, add, 0)
+```
+
+---
 
 ### List.foldRight
 ```
-Cryo.List.foldRight(list, inital, callback) -> value
+Cryo.List.foldRight(list, initialValue, callback) -> value
 ```
-Similar to [`List.foldLeft`](#list-foldLeft), except that the callback is
-called for each element of the list from the end to the beginning.
+Similar to [`List.foldLeft`](#list-foldLeft), except the list is traversed from right-to-left instead of from left-to-right. `foldRight` is useful when working with operations that aren't associative.
 
-### List.getRange
-```
-Cryo.List.getRange(list, startIndex, endIndex) -> list
-```
-Constructs a list from the given range. Both elements at `startIndex` and
-`endIndex` will be included in the returned list.
+---
 
 ### List.join
 ```
 Cryo.List.join(...lists) -> list
 ```
 Combines all the given lists into a single new list.
+
+---
 
 ### List.map
 ```
@@ -146,8 +154,7 @@ Constructs a new list by using the callback to replace elements in the list.
 callback(element, index) -> newElement
 ```
 
-`element` is an element from the list and `index` is its position. The
-returned value is the new element in the new list at the same position.
+---
 
 ### List.removeIndex
 ```
@@ -162,11 +169,15 @@ Cryo.List.removeRange(list, startIndex, endIndex) -> list
 Creates a new list without the given range. The indexes `startIndex` and
 `endIndex` will not be included in the returned list.
 
+---
+
 ### List.removeValue
 ```
 Cryo.List.removeValue(list, value) -> list
 ```
 Creates a new list without any occurences of the given value.
+
+---
 
 ### List.reverse
 ```
@@ -174,3 +185,13 @@ Cryo.List.reverse(list) -> list
 ```
 Creates a new list with the same elements from the given list, but in the
 opposite order.
+
+---
+
+### List.sort
+```
+Cryo.List.sort(list[, callback]) -> list
+```
+Constructs a new list that consists of the elements of the input list, but sorted using the given callback.
+
+`List.sort` is the immutable equivalent of Lua's `table.sort`.
