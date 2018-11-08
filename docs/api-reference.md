@@ -30,6 +30,23 @@ Keys specified in later tables will overwrite keys in previous tables.
 
 Use `Cryo.None` as a value to remove a value from the resulting table. This is necessary because Lua does not distinguish between a value not being present in a table and a value being `nil`.
 
+`Dictionary.join` is handy when dealing with configuration tables, where we might want default values.
+
+```lua
+local defaultConfig = {
+	frobulateProngs = true,
+	frobulator = "less"
+}
+
+local function doSomething(userConfig)
+	local config = Dictionary.join(defaultConfig, userConfig)
+
+	if config.frobulateProngs then
+		useFrobulator(config.frobulator)
+	end
+end
+```
+
 ---
 
 ### Dictionary.keys
