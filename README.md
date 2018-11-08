@@ -1,6 +1,5 @@
 <h1 align="center">Cryo</h1>
 <div align="center">
-<!-- Coming soon!
 	<a href="https://travis-ci.org/Roblox/cryo">
 		<img src="https://api.travis-ci.org/Roblox/cryo.svg?branch=master" alt="Travis-CI Build Status" />
 	</a>
@@ -10,7 +9,6 @@
 	<a href="https://roblox.github.io/cryo">
 		<img src="https://img.shields.io/badge/docs-website-green.svg" alt="Documentation" />
 	</a>
--->
 </div>
 
 <div align="center">
@@ -23,5 +21,23 @@ Cryo is a library that helps you write more terse code that deals with immutable
 
 Cryo works well to make [Rodux](https://github.com/Roblox/rodux) reducers cleaner!
 
+## Installation
+
+### Filesystem
+* Add this repository as a Git submodule or copy it into your project
+* Use a plugin like [Rojo](https://github.com/LPGhatguy/rojo) to sync the `src` folder into a place
+
+### Model File
+* Download the `rbxmx` model file attached to the latest release from the [GitHub releases page](https://github.com/Roblox/cryo/releases)
+* Insert the model into Studio into a place like `ReplicatedStorage`
+
+## Documentation
+Documentation for Cryo is available on [the official documentation website](https://roblox.github.io/cryo).
+
 ## License
-Cryo is available under the Apache 2.0 license. For details, see [LICENSE.txt](LICENSE.txt).
+Licensed under the MIT license ([LICENSE.txt](LICENSE.txt) or http://opensource.org/licenses/MIT).
+
+### Contribution
+Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the MIT license, shall be licensed as above, without any additional terms or conditions.
+
+Take a look at the [contributing guide](CONTRIBUTING.md) for guidelines on how to contribute to Cryo.

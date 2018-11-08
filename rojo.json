@@ -1,5 +1,17 @@
 {
-  "name": "cryo",
-  "servePort": 8000,
-  "partitions": {}
+	"name": "cryo",
+	"partitions": {
+		"src": {
+			"path": "src",
+			"target": "ReplicatedStorage.Modules.Cryo"
+		},
+		"modules/testez": {
+			"path": "modules/testez/lib",
+			"target": "ReplicatedStorage.Modules.TestEZ"
+		},
+		"run-tests": {
+			"path": "scripts/run-tests.server.lua",
+			"target": "ServerScriptService.RunTests-Cryo"
+		}
+	}
 }
