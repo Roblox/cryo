@@ -14,16 +14,14 @@
 </div>
 
 <div align="center">
-	A collection of methods for working with immutable data in Roblox Lua.
+	A collection of methods for working with immutable data in a functional way for Roblox Lua.
 </div>
 
 <div>&nbsp;</div>
 
-A collection of methods for working with immutable data in Roblox Lua.
+Cryo is a library that helps you write more terse code that deals with immutable data. It includes traditional FP list primitives like `map`, `filter`, and `foldLeft`, as well as tools inspired by JavaScript like joining dictionaries.
 
-Cryo works well with libraries like [Rodux](https://github.com/Roblox/Rodux)!
-
-Cryo is an early work in progress.
+Cryo works well to make [Rodux](https://github.com/Roblox/rodux) reducers cleaner!
 
 ## License
-Cryo is available under the CC0 license. For details, see [LICENSE](LICENSE).
+Cryo is available under the Apache 2.0 license. For details, see [LICENSE.txt](LICENSE.txt).
