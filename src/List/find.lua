@@ -1,5 +1,5 @@
 --[[
-	Returns the index of the given value or nil if not found.
+	Returns the index of the first value found or nil if not found.
 ]]
 
 local function find(list, value)

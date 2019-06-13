@@ -21,4 +21,10 @@ return function()
 		expect(find(a, 4)).to.equal(nil)
 		expect(type(find(a, 4))).to.equal("nil")
 	end)
+
+	it("should return the index of the first value found", function()
+		local list = {1, 2, 2}
+
+		expect(find(list, 2)).to.equal(2)
+	end)
 end
