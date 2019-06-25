@@ -187,6 +187,14 @@ Creates a new list without any occurences of the given value.
 
 ---
 
+### List.replaceIndex
+```
+Cryo.List.replaceIndex(list, index, value) -> list
+```
+Creates a new list with the new value at the given index. The function will throw an error if the index is larger than the list length.
+
+---
+
 ### List.reverse
 ```
 Cryo.List.reverse(list) -> list

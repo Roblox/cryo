@@ -14,6 +14,7 @@ return {
 	removeIndex = require(script.removeIndex),
 	removeRange = require(script.removeRange),
 	removeValue = require(script.removeValue),
+	replaceIndex = require(script.replaceIndex),
 	reverse = require(script.reverse),
 	sort = require(script.sort),
 }
