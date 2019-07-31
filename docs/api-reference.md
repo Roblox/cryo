@@ -110,6 +110,20 @@ Searches for the value in the given list and returns the position of the first o
 
 ---
 
+### List.findWhere
+```
+Cryo.List.findWhere(list, predicate) -> index | nil
+```
+`predicate` should be a function with this signature:
+
+```
+predicate(value, index) -> result
+```
+
+Searches for the first index in the given list for which `predicate` returns a truthy value. If the predicate never returns a truthy value, `findWhere` will return `nil`.
+
+---
+
 ### List.foldLeft
 ```
 Cryo.List.foldLeft(list, callback, initialValue) -> value

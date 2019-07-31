@@ -1,4 +1,4 @@
 # Cryo Version History
 
 ## master
-* *No changes*
+* Added a List.findWhere utility that allows one to supply a predicate to search in a list.
