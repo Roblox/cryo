@@ -4,13 +4,13 @@ return function()
 	it("should return a new table", function()
 		local list = {1, 2, 3}
 
-		expect(replaceIndex(list, 2, 0)).never.to.equal(a)
+		expect(replaceIndex(list, 2, 0)).never.to.equal(list)
 	end)
 
 	it("should not mutate the original list", function()
 		local list = {false, "foo", 3}
 		local value = {}
-		local result = replaceIndex(list, 2, value)
+		replaceIndex(list, 2, value)
 
 		expect(#list).to.equal(3)
 		expect(list[1]).to.equal(false)
