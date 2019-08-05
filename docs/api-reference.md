@@ -224,3 +224,9 @@ Cryo.List.sort(list[, callback]) -> list
 Constructs a new list that consists of the elements of the input list, but sorted using the given callback.
 
 `List.sort` is the immutable equivalent of Lua's `table.sort`.
+
+### List.toSet
+```
+Cryo.List.toSet(list) -> dictionary
+```
+Creates a dictionary where each value in the given list corresponds to a key in the dictionary with a value of true.
