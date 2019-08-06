@@ -1,0 +1,31 @@
+{
+    "name": "cryo",
+    "tree": {
+        "$className": "DataModel",
+        "ReplicatedStorage": {
+            "$className": "ReplicatedStorage",
+            "Modules": {
+                "$className": "Folder",
+
+                "TestEZ": {
+                    "$path": "modules/testez/lib"
+                },
+                "Cryo": {
+                    "$path": "src"
+                }
+            }
+        },
+        "ServerScriptService": {
+            "$className": "ServerScriptService",
+            "RunTests-Cryo": {
+                "$path": "scripts/run-tests.server.lua"
+            }
+        },
+        "Players": {
+            "$className": "Players",
+            "$properties": {
+                "CharacterAutoLoads": false
+            }
+        }
+    }
+}
