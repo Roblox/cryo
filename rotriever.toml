@@ -1,4 +1,5 @@
-name = "Cryo"
+[package]
+name = "roblox/cryo"
 author = "Roblox"
 license = "MIT"
 content_root = "src"
