@@ -6,7 +6,7 @@ return function()
 		local a = {
 			"first",
 			"second",
-			"third"
+			"third",
 		}
 
 		local b = removeIndex(a, 2)
@@ -20,7 +20,7 @@ return function()
 		local a = {
 			"first",
 			"second",
-			"third"
+			"third",
 		}
 		local b = removeIndex(a, 4)
 
@@ -41,7 +41,7 @@ return function()
 		local a = {
 			"first",
 			None,
-			"third"
+			"third",
 		}
 
 		local b = removeIndex(a, 1)

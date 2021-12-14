@@ -5,11 +5,11 @@ return function()
 	it("should not mutate the given table", function()
 		local a = {
 			Foo = "FooValue",
-			Bar = "BarValue"
+			Bar = "BarValue",
 		}
 		local aCopy = {
 			Foo = "FooValue",
-			Bar = "BarValue"
+			Bar = "BarValue",
 		}
 
 		values(a)
@@ -26,12 +26,12 @@ return function()
 		local a = {
 			Foo = "FooValue",
 			Bar = "BarValue",
-			Test = "TestValue"
+			Test = "TestValue",
 		}
 		local valueCount = {
 			FooValue = 1,
 			BarValue = 1,
-			TestValue = 1
+			TestValue = 1,
 		}
 		local b = values(a)
 
@@ -49,7 +49,7 @@ return function()
 		local a = {
 			Foo = "FooValue",
 			Bar = "BarValue",
-			Test = "FooValue"
+			Test = "FooValue",
 		}
 		local valueCount = {
 			FooValue = 2,
@@ -76,11 +76,11 @@ return function()
 	it("should contain a None element if there is a None value in the dictionary", function()
 		local a = {
 			Foo = None,
-			Bar = "BarValue"
+			Bar = "BarValue",
 		}
 		local valueCount = {
 			[None] = 1,
-			BarValue = 1
+			BarValue = 1,
 		}
 		local b = values(a)
 

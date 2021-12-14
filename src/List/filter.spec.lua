@@ -5,7 +5,7 @@ return function()
 		local a = {
 			"foo1",
 			"foo2",
-			"foo3"
+			"foo3",
 		}
 		local copy = {}
 		local function copyCallback(value, index)
@@ -24,7 +24,7 @@ return function()
 	end)
 
 	it("should correctly use the filter callback", function()
-		local a = {1, 2, 3, 4, 5}
+		local a = { 1, 2, 3, 4, 5 }
 		local function evenOnly(value)
 			return value % 2 == 0
 		end
@@ -36,7 +36,7 @@ return function()
 	end)
 
 	it("should copy the list correctly", function()
-		local a = {1, 2, 3}
+		local a = { 1, 2, 3 }
 		local function keepAll()
 			return true
 		end
@@ -66,7 +66,7 @@ return function()
 	end)
 
 	it("should remove all element from a list when callback return always false", function()
-		local a = {6, 2, 8, 6, 7}
+		local a = { 6, 2, 8, 6, 7 }
 		local function removeAll()
 			return false
 		end

@@ -2,7 +2,7 @@ return function()
 	local foldLeft = require(script.Parent.foldLeft)
 
 	it("should call the callback", function()
-		local a = {1, 2, 3}
+		local a = { 1, 2, 3 }
 		local called = 0
 
 		foldLeft(a, function()
@@ -23,7 +23,7 @@ return function()
 	end)
 
 	it("should call the callback for each element", function()
-		local a = {4, 5, 6}
+		local a = { 4, 5, 6 }
 		local copy = {}
 
 		foldLeft(a, function(accum, value, index)
@@ -39,7 +39,7 @@ return function()
 	end)
 
 	it("should pass the same modified initial value to the callback", function()
-		local a = {5, 4, 3}
+		local a = { 5, 4, 3 }
 		local initialValue = {}
 
 		foldLeft(a, function(accum)
@@ -49,7 +49,7 @@ return function()
 	end)
 
 	it("should call the callback in the correct order", function()
-		local a = {5, 4, 3}
+		local a = { 5, 4, 3 }
 		local index = 1
 
 		foldLeft(a, function(accum, value)

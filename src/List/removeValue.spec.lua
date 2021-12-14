@@ -3,7 +3,7 @@ return function()
 	local None = require(script.Parent.Parent.None)
 
 	it("should remove the given value", function()
-		local a = {1, 4, 3}
+		local a = { 1, 4, 3 }
 		local b = removeValue(a, 4)
 
 		expect(b[1]).to.equal(1)
@@ -11,7 +11,7 @@ return function()
 	end)
 
 	it("should remove all occurences of the same given value", function()
-		local a = {1, 2, 2, 3}
+		local a = { 1, 2, 2, 3 }
 		local b = removeValue(a, 2)
 
 		expect(#b).to.equal(2)
@@ -27,7 +27,7 @@ return function()
 	end)
 
 	it("should work with a None element", function()
-		local a = {1, 2, None, 3}
+		local a = { 1, 2, None, 3 }
 		local b = removeValue(a, 2)
 
 		expect(#b).to.equal(3)

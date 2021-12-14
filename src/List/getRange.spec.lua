@@ -2,7 +2,7 @@ return function()
 	local getRange = require(script.Parent.getRange)
 
 	it("should return the correct range", function()
-		local a = {1, 2, 3, 4}
+		local a = { 1, 2, 3, 4 }
 		local b = getRange(a, 2, 3)
 
 		expect(b[1]).to.equal(2)
@@ -15,7 +15,7 @@ return function()
 	end)
 
 	it("should throw when the start index is higher than the end index", function()
-		local a = {5, 8, 7, 2, 3, 7}
+		local a = { 5, 8, 7, 2, 3, 7 }
 
 		expect(function()
 			getRange(a, 4, 1)
@@ -23,7 +23,7 @@ return function()
 	end)
 
 	it("should copy the table", function()
-		local a = {6, 8, 1, 3, 7, 2}
+		local a = { 6, 8, 1, 3, 7, 2 }
 		local b = getRange(a, 1, #a)
 
 		for key, value in pairs(a) do
@@ -43,7 +43,7 @@ return function()
 	end)
 
 	it("should work when the start index is smaller that 1", function()
-		local a = {1, 2, 3, 4}
+		local a = { 1, 2, 3, 4 }
 		local b = getRange(a, -2, 2)
 
 		expect(#b).to.equal(2)
@@ -52,7 +52,7 @@ return function()
 	end)
 
 	it("should work when the end index is larger that the list length", function()
-		local a = {1, 2, 3, 4}
+		local a = { 1, 2, 3, 4 }
 		local b = getRange(a, 3, 18)
 
 		expect(#b).to.equal(2)

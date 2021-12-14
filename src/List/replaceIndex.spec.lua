@@ -2,13 +2,13 @@ return function()
 	local replaceIndex = require(script.Parent.replaceIndex)
 
 	it("should return a new table", function()
-		local list = {1, 2, 3}
+		local list = { 1, 2, 3 }
 
 		expect(replaceIndex(list, 2, 0)).never.to.equal(list)
 	end)
 
 	it("should not mutate the original list", function()
-		local list = {false, "foo", 3}
+		local list = { false, "foo", 3 }
 		local value = {}
 		replaceIndex(list, 2, value)
 
@@ -19,7 +19,7 @@ return function()
 	end)
 
 	it("should replace the value at the given index", function()
-		local list = {1, 2, 3}
+		local list = { 1, 2, 3 }
 		local value = {}
 		local result = replaceIndex(list, 2, value)
 
@@ -30,7 +30,7 @@ return function()
 	end)
 
 	it("should throw if the given index is higher than the list length", function()
-		local list = {1}
+		local list = { 1 }
 
 		expect(function()
 			replaceIndex(list, #list + 1, {})
@@ -39,7 +39,7 @@ return function()
 
 	it("should be able to replace to a falsy value", function()
 		local tableElement = {}
-		local list = {tableElement, false, "value", true}
+		local list = { tableElement, false, "value", true }
 		local newValue = false
 
 		local result = replaceIndex(list, 3, newValue)

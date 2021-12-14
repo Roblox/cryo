@@ -2,13 +2,13 @@ return function()
 	local toSet = require(script.Parent.toSet)
 
 	it("should return a new table", function()
-		local a = {1, 2, 3}
+		local a = { 1, 2, 3 }
 
 		expect(toSet(a)).never.to.equal(a)
 	end)
 
 	it("should not mutate the given table", function()
-		local a = {"a", "b", "c"}
+		local a = { "a", "b", "c" }
 		toSet(a)
 
 		for k, v in pairs(a) do
@@ -25,7 +25,7 @@ return function()
 	end)
 
 	it("should have every value in a as a key mapped to true in b", function()
-		local a = {1, 2, 3, "a", "b", "c"}
+		local a = { 1, 2, 3, "a", "b", "c" }
 		local b = toSet(a)
 
 		expect(#b).to.equal(3)

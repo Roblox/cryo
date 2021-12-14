@@ -10,12 +10,12 @@ return function()
 
 	it("should remove elements equal to None", function()
 		local a = {
-			"foo-a"
+			"foo-a",
 		}
 
 		local b = {
 			None,
-			"foo-b"
+			"foo-b",
 		}
 
 		local c = join(a, b)
@@ -26,9 +26,9 @@ return function()
 	end)
 
 	it("should accept arbitrary numbers of tables", function()
-		local a = {1}
-		local b = {2}
-		local c = {3}
+		local a = { 1 }
+		local b = { 2 }
+		local c = { 3 }
 
 		local d = join(a, b, c)
 

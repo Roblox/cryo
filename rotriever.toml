@@ -1,7 +1,12 @@
 [package]
-name = "roblox/cryo"
-author = "Roblox"
+name = "Cryo"
+authors = [
+    "Roblox"
+]
 license = "MIT"
 content_root = "src"
 version = "1.0.0"
 files = [ "*", "!*.spec.lua" ]
+
+[dev_dependencies]
+TestEZ = "github.com/Roblox/testez@0.4.1"

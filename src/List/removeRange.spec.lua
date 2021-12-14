@@ -3,14 +3,14 @@ return function()
 	local None = require(script.Parent.Parent.None)
 
 	it("should remove elements properly", function()
-		local a = {1, 2, 3}
+		local a = { 1, 2, 3 }
 		local b = removeRange(a, 2, 2)
 
 		expect(#b).to.equal(2)
 		expect(b[1]).to.equal(1)
 		expect(b[2]).to.equal(3)
 
-		local c = {1, 2, 3, 4, 5, 6}
+		local c = { 1, 2, 3, 4, 5, 6 }
 		local d = removeRange(c, 1, 4)
 
 		expect(#d).to.equal(2)
@@ -25,7 +25,7 @@ return function()
 	end)
 
 	it("should throw when the start index is higher than the end index", function()
-		local a = {1, 2, 3}
+		local a = { 1, 2, 3 }
 
 		expect(function()
 			removeRange(a, 2, 0)
@@ -37,7 +37,7 @@ return function()
 	end)
 
 	it("should copy the table when then indexes are higher than the list length", function()
-		local a = {1, 2, 3}
+		local a = { 1, 2, 3 }
 		local b = removeRange(a, 4, 7)
 
 		expect(#b).to.equal(3)
@@ -47,7 +47,7 @@ return function()
 	end)
 
 	it("should work when the start index is smaller than 1", function()
-		local a = {1, 2, 3, 4}
+		local a = { 1, 2, 3, 4 }
 		local b = removeRange(a, -5, 2)
 
 		expect(#b).to.equal(2)
@@ -56,7 +56,7 @@ return function()
 	end)
 
 	it("should work when the end index is greater than the list length", function()
-		local a = {1, 2, 3, 4}
+		local a = { 1, 2, 3, 4 }
 		local b = removeRange(a, 3, 8)
 
 		expect(#b).to.equal(2)
@@ -65,7 +65,7 @@ return function()
 	end)
 
 	it("should work with a None element", function()
-		local a = {1, None, 3}
+		local a = { 1, None, 3 }
 		local b = removeRange(a, 1, 1)
 
 		expect(#b).to.equal(2)

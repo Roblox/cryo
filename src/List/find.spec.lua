@@ -2,7 +2,7 @@ return function()
 	local find = require(script.Parent.find)
 
 	it("should return the correct index", function()
-		local a = {5, 4, 3, 2, 1}
+		local a = { 5, 4, 3, 2, 1 }
 
 		expect(find(a, 1)).to.equal(5)
 		expect(find(a, 2)).to.equal(4)
@@ -16,14 +16,14 @@ return function()
 	end)
 
 	it("should return nil when the given value is not found", function()
-		local a = {1, 2, 3}
+		local a = { 1, 2, 3 }
 
 		expect(find(a, 4)).to.equal(nil)
 		expect(type(find(a, 4))).to.equal("nil")
 	end)
 
 	it("should return the index of the first value found", function()
-		local list = {1, 2, 2}
+		local list = { 1, 2, 2 }
 
 		expect(find(list, 2)).to.equal(2)
 	end)

@@ -2,13 +2,13 @@ return function()
 	local reverse = require(script.Parent.reverse)
 
 	it("should return a new table", function()
-		local a = {1, 2, 3}
+		local a = { 1, 2, 3 }
 
 		expect(reverse(a)).never.to.equal(a)
 	end)
 
 	it("should not mutate the given table", function()
-		local a = {1, 2, 3}
+		local a = { 1, 2, 3 }
 		reverse(a)
 
 		expect(#a).to.equal(3)
@@ -20,11 +20,11 @@ return function()
 	it("should contain the same elements", function()
 		local a = {
 			"Foo",
-			"Bar"
+			"Bar",
 		}
 		local aSet = {
 			Foo = true,
-			Bar = true
+			Bar = true,
 		}
 		local b = reverse(a)
 
@@ -35,7 +35,7 @@ return function()
 	end)
 
 	it("should reverse the list", function()
-		local a = {1, 2, 3, 4}
+		local a = { 1, 2, 3, 4 }
 		local b = reverse(a)
 
 		expect(b[1]).to.equal(4)

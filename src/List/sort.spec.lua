@@ -8,7 +8,7 @@ return function()
 	end)
 
 	it("should not mutate the given table", function()
-		local a = {77, "foo", 2}
+		local a = { 77, "foo", 2 }
 		local function order(first, second)
 			return tostring(first) < tostring(second)
 		end
@@ -24,12 +24,12 @@ return function()
 		local a = {
 			"Foo",
 			"Bar",
-			"Test"
+			"Test",
 		}
 		local elementSet = {
 			Foo = true,
 			Bar = true,
-			Test = true
+			Test = true,
 		}
 		local b = sort(a)
 
@@ -40,7 +40,7 @@ return function()
 	end)
 
 	it("should sort with the default table.sort when no callback is given", function()
-		local a = {4, 2, 5, 3, 1}
+		local a = { 4, 2, 5, 3, 1 }
 		local b = sort(a)
 
 		table.sort(a)
@@ -52,7 +52,7 @@ return function()
 	end)
 
 	it("should sort with the given callback", function()
-		local a = {1, 2, 5, 3, 4}
+		local a = { 1, 2, 5, 3, 4 }
 		local function order(first, second)
 			return first > second
 		end

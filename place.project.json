@@ -1,31 +1,25 @@
 {
-    "name": "cryo",
-    "tree": {
-        "$className": "DataModel",
-        "ReplicatedStorage": {
-            "$className": "ReplicatedStorage",
-            "Modules": {
-                "$className": "Folder",
+  "name": "Cryo",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "Packages": {
+        "$path": "Packages",
 
-                "TestEZ": {
-                    "$path": "modules/testez/lib"
-                },
-                "Cryo": {
-                    "$path": "src"
-                }
-            }
-        },
-        "ServerScriptService": {
-            "$className": "ServerScriptService",
-            "RunTests-Cryo": {
-                "$path": "scripts/run-tests.server.lua"
-            }
-        },
-        "Players": {
-            "$className": "Players",
-            "$properties": {
-                "CharacterAutoLoads": false
-            }
+        "Cryo": {
+          "$path": "src"
         }
+      }
+    },
+    "ServerScriptService": {
+      "Tests": {
+        "$path": "tests"
+      }
+    },
+    "Players": {
+      "$properties": {
+        "CharacterAutoLoads": false
+      }
     }
+  }
 }
