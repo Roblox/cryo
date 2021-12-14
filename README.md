@@ -1,7 +1,7 @@
 <h1 align="center">Cryo</h1>
 <div align="center">
-	<a href="https://travis-ci.org/Roblox/cryo">
-		<img src="https://api.travis-ci.org/Roblox/cryo.svg?branch=master" alt="Travis-CI Build Status" />
+	<a href="https://github.com/Roblox/cryo/actions/workflows/ci.yml">
+		<img src="https://github.com/Roblox/cryo/actions/workflows/ci.yml/badge.svg" alt="GitHub CI" />
 	</a>
 	<a href="https://coveralls.io/github/Roblox/cryo?branch=master">
 		<img src="https://coveralls.io/repos/github/Roblox/cryo/badge.svg?branch=master" alt="Coveralls Coverage" />
@@ -24,20 +24,25 @@ Cryo works well to make [Rodux](https://github.com/Roblox/rodux) reducers cleane
 ## Installation
 
 ### Filesystem
-* Add this repository as a Git submodule or copy it into your project
-* Use a plugin like [Rojo](https://github.com/LPGhatguy/rojo) to sync the `src` folder into a place
+
+- Add this repository as a Git submodule or copy it into your project
+- Use a plugin like [Rojo](https://github.com/LPGhatguy/rojo) to sync the `src` folder into a place
 
 ### Model File
-* Download the `rbxmx` model file attached to the latest release from the [GitHub releases page](https://github.com/Roblox/cryo/releases)
-* Insert the model into Studio into a place like `ReplicatedStorage`
+
+- Download the `rbxmx` model file attached to the latest release from the [GitHub releases page](https://github.com/Roblox/cryo/releases)
+- Insert the model into Studio into a place like `ReplicatedStorage`
 
 ## Documentation
+
 Documentation for Cryo is available on [the official documentation website](https://roblox.github.io/cryo).
 
 ## License
+
 Licensed under the MIT license ([LICENSE.txt](LICENSE.txt) or http://opensource.org/licenses/MIT).
 
 ### Contribution
+
 Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the MIT license, shall be licensed as above, without any additional terms or conditions.
 
 Take a look at the [contributing guide](CONTRIBUTING.md) for guidelines on how to contribute to Cryo.

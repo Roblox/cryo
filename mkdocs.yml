@@ -9,7 +9,7 @@ theme:
     primary: 'Orange'
     accent: 'Orange'
 
-pages:
+nav:
   - Home: index.md
   - API Reference: api-reference.md
 
