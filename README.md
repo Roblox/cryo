@@ -3,8 +3,8 @@
 	<a href="https://github.com/Roblox/cryo/actions/workflows/ci.yml">
 		<img src="https://github.com/Roblox/cryo/actions/workflows/ci.yml/badge.svg" alt="GitHub CI" />
 	</a>
-	<a href="https://coveralls.io/github/Roblox/cryo?branch=master">
-		<img src="https://coveralls.io/repos/github/Roblox/cryo/badge.svg?branch=master" alt="Coveralls Coverage" />
+	<a href='https://coveralls.io/github/Roblox/cryo?branch=main'>
+		<img src='https://coveralls.io/repos/github/Roblox/cryo/badge.svg?branch=main&amp;t=49bK0s' alt='Coverage Status' />
 	</a>
 	<a href="https://roblox.github.io/cryo">
 		<img src="https://img.shields.io/badge/docs-website-green.svg" alt="Documentation" />
