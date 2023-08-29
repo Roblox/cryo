@@ -10,12 +10,22 @@ local None = require(script.Parent.Parent.None)
 	value being `nil`.
 ]]
 local function join(...)
-	local new = {}
+	local argCount = select("#", ...)
+	if argCount == 0 then
+		return {}
+	elseif argCount == 1 then
+		local new = table.clone(...)
+		setmetatable(new, nil) -- We don't want cloned metatables
+		return new
+	end
 
-	for i = 1, select("#", ...) do
+	local new = table.clone(select(1, ...))
+	setmetatable(new, nil) -- We don't want cloned metatables
+
+	for i = 2, argCount do
 		local source = select(i, ...)
 
-		for key, value in pairs(source) do
+		for key, value in source do
 			if value == None then
 				new[key] = nil
 			else

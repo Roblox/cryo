@@ -68,6 +68,26 @@ return function()
 		expect(b.foo).to.equal("foo-b")
 	end)
 
+	it("should not copy metatables of passed in tables", function()
+		local a = setmetatable({
+			foo = "foo-a",
+		}, {
+			__index = function() end,
+		})
+
+		local b = setmetatable({
+			foo = "foo-b",
+		}, {
+			__index = function() end,
+		})
+
+		local c = join(a, b)
+		local d = join(a)
+
+		expect(getmetatable(c)).to.equal(nil)
+		expect(getmetatable(d)).to.equal(nil)
+	end)
+
 	it("should accept arbitrary numbers of tables", function()
 		local a = {
 			foo = "foo-a",
