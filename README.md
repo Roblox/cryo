@@ -23,15 +23,10 @@ Cryo works well to make [Rodux](https://github.com/Roblox/rodux) reducers cleane
 
 ## Installation
 
-### Filesystem
-
-- Add this repository as a Git submodule or copy it into your project
-- Use a plugin like [Rojo](https://github.com/LPGhatguy/rojo) to sync the `src` folder into a place
-
-### Model File
-
-- Download the `rbxmx` model file attached to the latest release from the [GitHub releases page](https://github.com/Roblox/cryo/releases)
-- Insert the model into Studio into a place like `ReplicatedStorage`
+This project can be specified as a dependency via rotriever:
+```toml
+Cryo = "github.com/roblox/cryo@1.0.2"
+```
 
 ## Documentation
 
