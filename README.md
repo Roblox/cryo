@@ -25,7 +25,7 @@ Cryo works well to make [Rodux](https://github.com/Roblox/rodux) reducers cleane
 
 This project can be specified as a dependency via rotriever:
 ```toml
-Cryo = "github.com/roblox/cryo@1.0.2"
+Cryo = "github.com/roblox/cryo@1.0.3"
 ```
 
 ## Documentation

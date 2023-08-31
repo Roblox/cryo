@@ -1,5 +1,8 @@
 # Cryo Version History
 
+## 1.0.3
+* Partially roll back `Dictionary.join` optimization to preserve iteration behavior ([#58](https://github.com/Roblox/cryo/pull/58))
+
 ## 1.0.2
 * Optimized `Dictionary.join` performance using latest Luau best practices ([#56](https://github.com/Roblox/cryo/pull/56))
 

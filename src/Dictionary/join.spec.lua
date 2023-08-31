@@ -111,4 +111,15 @@ return function()
 	it("should accept zero tables", function()
 		expect(join()).to.be.a("table")
 	end)
+
+	it("should safely iterate through tables with call metamethods", function()
+		local callable = setmetatable({ A = 1 }, {
+			__call = function(_self, ...)
+				error(...)
+			end,
+		})
+		expect(function()
+			join({}, callable)
+		end).never.to.throw()
+	end)
 end

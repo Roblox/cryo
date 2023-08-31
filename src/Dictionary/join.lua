@@ -25,7 +25,7 @@ local function join(...)
 	for i = 2, argCount do
 		local source = select(i, ...)
 
-		for key, value in source do
+		for key, value in pairs(source) do
 			if value == None then
 				new[key] = nil
 			else
