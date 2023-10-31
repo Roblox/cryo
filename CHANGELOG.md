@@ -1,13 +1,13 @@
 # Cryo Version History
 
 ## 1.0.3
-* Partially roll back `Dictionary.join` optimization to preserve iteration behavior ([#58](https://github.com/Roblox/cryo/pull/58))
+* Partially roll back `Dictionary.join` optimization to preserve iteration behavior ([#58](https://github.com/Roblox/cryo-internal/pull/58))
 
 ## 1.0.2
-* Optimized `Dictionary.join` performance using latest Luau best practices ([#56](https://github.com/Roblox/cryo/pull/56))
+* Optimized `Dictionary.join` performance using latest Luau best practices ([#56](https://github.com/Roblox/cryo-internal/pull/56))
 
 ## 1.0.1
-* Exclude .spec test files from released package ([#49](https://github.com/Roblox/cryo/pull/49))
+* Exclude .spec test files from released package ([#49](https://github.com/Roblox/cryo-internal/pull/49))
 
 ## 1.0.0
 * Added a List.findWhere utility that allows one to supply a predicate to search in a list.
