@@ -78,4 +78,4 @@ type = "function"
 args = []
 
 [[expect.extend.args]]
-type = "function"
+type = "any"

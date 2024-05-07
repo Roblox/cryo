@@ -1,0 +1,17 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "robloxLuauLSP.cli.extraArgs": [
+            "--load.place",
+            "place.project.json",
+        ],
+        "coverage-gutters.coverageBaseDir": "coverage/**",
+        "coverage-gutters.coverageFileNames": [
+            "*.info",
+        ],
+    },
+}
