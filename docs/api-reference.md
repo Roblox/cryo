@@ -137,6 +137,18 @@ Cryo.Dictionary.omit(dictionary, ...keys) -> dictionary
 
 Creates a new dictionary without the given keys.
 
+---
+
+### Dictionary.union
+
+```
+Cryo.Dictionary.union(dictionaryA, dictionaryB) -> dictionary
+```
+
+Creates a new dictionary that contains all the keys and values from both dictionaries. If a key is present in both dictionaries, the value from `dictionaryB` will be used.
+
+---
+
 ### Dictionary.values
 
 ```
